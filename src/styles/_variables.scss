@@ -30,6 +30,16 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
+$theme:('primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+);
+
 $font-family-sans-serif: -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -228,7 +238,7 @@ $menu-border-width: $border-width !default;
 $menu-border-color: $border-color !default;
 $menu-box-shadow: inset 0 1px 0 rgba($white, .15),
 0 1px 1px rgba($black, .075) !default;
-$menu-transition: color .15s ease-in-out,
+$menu-transition: color .25s ease-in-out,
 border-color .15s ease-in-out !default;
 
 // menu-item
