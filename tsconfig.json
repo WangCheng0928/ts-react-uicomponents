@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "/dist",
     "target": "es5",
     "lib": [
       "dom",
@@ -14,12 +15,13 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "rootDirs": ["src", "stories"],
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react"
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": ["node_modules", "build", "scripts"]
 }

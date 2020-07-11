@@ -1,4 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, {
+  useState,
+  useEffect,
+  FC,
+  CSSProperties,
+  FunctionComponentElement,
+} from 'react'
 import classNames from 'classnames'
 import { MenuItemProps } from './menuItem'
 
@@ -6,11 +12,17 @@ export type MenuMode = 'vertical' | 'horizontal'
 type SelectCallback = (selectIndex: string) => void
 
 export interface MenuProps {
+  /**设置菜单className */
   className?: string
+  /**设置菜单默认选中的menuItem */
   defaultIndex?: string
+  /** 设置菜单排列方式 */
   mode?: MenuMode
-  style?: React.CSSProperties
+  /**给菜单添加样式 */
+  style?: CSSProperties
+  /**回调函数callback */
   onSelected?: SelectCallback
+  /**当设置此参数后，纵向submenu默认打开 */
   defaultOpenSubMenus?: string[]
 }
 
@@ -23,7 +35,7 @@ interface IMenuContext {
 
 export const MenuContext = React.createContext<IMenuContext>({ index: '0' })
 
-const Menu: React.FC<MenuProps> = (props) => {
+export const Menu: FC<MenuProps> = (props) => {
   const {
     className,
     mode,
@@ -61,9 +73,7 @@ const Menu: React.FC<MenuProps> = (props) => {
 
   const renderChildren = () => {
     return React.Children.map(children, (child, index) => {
-      const childElement = child as React.FunctionComponentElement<
-        MenuItemProps
-      >
+      const childElement = child as FunctionComponentElement<MenuItemProps>
       const { displayName } = childElement.type
       if (displayName === 'MenuItem' || displayName === 'SubMenu') {
         return React.cloneElement(childElement, { index: index.toString() })

@@ -1,18 +1,25 @@
-import React, { useContext, FunctionComponentElement, useState } from 'react'
+import React, {
+  useContext,
+  FunctionComponentElement,
+  useState,
+  FC,
+} from 'react'
 import classNames from 'classnames'
-import { MenuMode, MenuContext } from './menu'
+import { MenuContext } from './menu'
 import { MenuItemProps } from './menuItem'
 import Icon from '../icon/icon'
 import Transition from '../transition/transition'
 
 interface ISubmenuProps {
+  /**submenu的menuItem */
   index?: string
+  /**设置submenu的className */
   className?: string
-  mode?: MenuMode
+  /** 设置submenu的名称 */
   title?: string
 }
 
-const SubMenu: React.FC<ISubmenuProps> = (props) => {
+export const SubMenu: FC<ISubmenuProps> = (props) => {
   const context = useContext(MenuContext)
   const { index, title, className, children } = props
   const openedSubMenu = context.defaultOpenSubMenus as Array<String>
@@ -69,7 +76,7 @@ const SubMenu: React.FC<ISubmenuProps> = (props) => {
       }
     })
     return (
-      <Transition show={menuOpen} classNames="zoom-in-bottom">
+      <Transition show={menuOpen} classNames="zoom-in-top">
         <ul className={subMenuClass}>{childrenComponent}</ul>
       </Transition>
     )

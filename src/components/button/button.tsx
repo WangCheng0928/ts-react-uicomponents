@@ -1,44 +1,48 @@
-import React from 'react'
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 import classNames from 'classnames'
 
-export enum ButtonSize {
-  Large = 'lg',
-  Small = 'sm',
-}
+type ButtonSize = 'lg' | 'sm'
 
-export enum ButtonType {
-  Primary = 'primary',
-  Default = 'default',
-  Danger = 'danger',
-  Link = 'link',
-}
+type ButtonType = 'primary' | 'default' | 'danger' | 'link'
 
 // button的props
 interface BaseButtonProps {
   className?: string
+  /** 设置Button的禁用 */
   disabled?: boolean
+  /** 设置Button的类型 */
   btnType?: ButtonType
+  /** 设置Button的尺寸 */
   size?: ButtonSize
   children: React.ReactNode
   href?: string
 }
 
 type NativeButtonProps = BaseButtonProps &
-  React.ButtonHTMLAttributes<HTMLButtonElement>
+  ButtonHTMLAttributes<HTMLButtonElement>
 type AnchorButtonProps = BaseButtonProps &
-  React.AnchorHTMLAttributes<HTMLAnchorElement>
+  AnchorHTMLAttributes<HTMLAnchorElement>
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
-const Button: React.FC<ButtonProps> = (props) => {
+/**
+ *
+ * The most commonly used button elements on the page, suitable for completing specific interactions
+ * #### reference methods
+ *
+ * ~~~js
+ * import { Button } from 'north-embankment-ui'
+ * ~~~
+ */
+export const Button: FC<ButtonProps> = (props) => {
   const { btnType, size, children, disabled, href, ...restPropps } = props
 
   const classes = classNames('btn', {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
-    disabled: btnType === ButtonType.Link && disabled,
+    disabled: btnType === 'link' && disabled,
   })
 
-  if (btnType === ButtonType.Link && href) {
+  if (btnType === 'link' && href) {
     return (
       <a className={classes} href={href} {...restPropps}>
         {children}
@@ -55,7 +59,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
 Button.defaultProps = {
   disabled: false,
-  btnType: ButtonType.Default,
+  btnType: 'default',
 }
 
 export default Button

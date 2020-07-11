@@ -1,10 +1,10 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import Button, { ButtonType, ButtonSize, ButtonProps } from './button'
+import Button, { ButtonProps } from './button'
 
 const testProps: ButtonProps = {
-  btnType: ButtonType.Primary,
-  size: ButtonSize.Large,
+  btnType: 'primary',
+  size: 'lg',
 }
 
 const disabledProps: ButtonProps = {
@@ -31,7 +31,7 @@ describe('test button component', () => {
 
   it('should render a link when btnType equals link and href is provided', () => {
     const wrapper = render(
-      <Button btnType={ButtonType.Link} href="http://www.baidu.com">
+      <Button btnType="link" href="http://www.baidu.com">
         Nice
       </Button>
     )
