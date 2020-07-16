@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/WangCheng0928/ts-react-uicomponents/static/css/main.f6dc477a.chunk.css",
-    "main.js": "/WangCheng0928/ts-react-uicomponents/main.c93348ac3bf9bb959877.bundle.js",
-    "main.css.map": "/WangCheng0928/ts-react-uicomponents/static/css/main.f6dc477a.chunk.css.map",
-    "main.js.map": "/WangCheng0928/ts-react-uicomponents/main.c93348ac3bf9bb959877.bundle.js.map",
-    "runtime~main.js": "/WangCheng0928/ts-react-uicomponents/runtime~main.c93348ac3bf9bb959877.bundle.js",
-    "runtime~main.js.map": "/WangCheng0928/ts-react-uicomponents/runtime~main.c93348ac3bf9bb959877.bundle.js.map",
+    "main.css": "/WangCheng0928/ts-react-uicomponents/static/css/main.b9d80641.chunk.css",
+    "main.js": "/WangCheng0928/ts-react-uicomponents/main.0624a533e435db60af1c.bundle.js",
+    "main.css.map": "/WangCheng0928/ts-react-uicomponents/static/css/main.b9d80641.chunk.css.map",
+    "main.js.map": "/WangCheng0928/ts-react-uicomponents/main.0624a533e435db60af1c.bundle.js.map",
+    "runtime~main.js": "/WangCheng0928/ts-react-uicomponents/runtime~main.0624a533e435db60af1c.bundle.js",
+    "runtime~main.js.map": "/WangCheng0928/ts-react-uicomponents/runtime~main.0624a533e435db60af1c.bundle.js.map",
     "vendors~main.css": "/WangCheng0928/ts-react-uicomponents/static/css/vendors~main.f8f248a5.chunk.css",
-    "vendors~main.js": "/WangCheng0928/ts-react-uicomponents/vendors~main.c93348ac3bf9bb959877.bundle.js",
+    "vendors~main.js": "/WangCheng0928/ts-react-uicomponents/vendors~main.0624a533e435db60af1c.bundle.js",
     "vendors~main.css.map": "/WangCheng0928/ts-react-uicomponents/static/css/vendors~main.f8f248a5.chunk.css.map",
-    "vendors~main.js.map": "/WangCheng0928/ts-react-uicomponents/vendors~main.c93348ac3bf9bb959877.bundle.js.map",
+    "vendors~main.js.map": "/WangCheng0928/ts-react-uicomponents/vendors~main.0624a533e435db60af1c.bundle.js.map",
     "iframe.html": "/WangCheng0928/ts-react-uicomponents/iframe.html",
-    "precache-manifest.94136c74b6ef3ef0b9461fa0e411b67b.js": "/WangCheng0928/ts-react-uicomponents/precache-manifest.94136c74b6ef3ef0b9461fa0e411b67b.js",
+    "precache-manifest.a28056cbc6e4b04d2180578b5f117ac0.js": "/WangCheng0928/ts-react-uicomponents/precache-manifest.a28056cbc6e4b04d2180578b5f117ac0.js",
     "service-worker.js": "/WangCheng0928/ts-react-uicomponents/service-worker.js",
-    "vendors~main.c93348ac3bf9bb959877.bundle.js.LICENSE.txt": "/WangCheng0928/ts-react-uicomponents/vendors~main.c93348ac3bf9bb959877.bundle.js.LICENSE.txt"
+    "static/media/index.scss": "/WangCheng0928/ts-react-uicomponents/static/media/upload.203958f3.svg",
+    "vendors~main.0624a533e435db60af1c.bundle.js.LICENSE.txt": "/WangCheng0928/ts-react-uicomponents/vendors~main.0624a533e435db60af1c.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.c93348ac3bf9bb959877.bundle.js",
+    "runtime~main.0624a533e435db60af1c.bundle.js",
     "static/css/vendors~main.f8f248a5.chunk.css",
-    "vendors~main.c93348ac3bf9bb959877.bundle.js",
-    "static/css/main.f6dc477a.chunk.css",
-    "main.c93348ac3bf9bb959877.bundle.js"
+    "vendors~main.0624a533e435db60af1c.bundle.js",
+    "static/css/main.b9d80641.chunk.css",
+    "main.0624a533e435db60af1c.bundle.js"
   ]
 }
