@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/WangCheng0928/ts-react-uicomponents/static/css/main.f6dc477a.chunk.css",
+    "main.js": "/WangCheng0928/ts-react-uicomponents/main.c93348ac3bf9bb959877.bundle.js",
+    "main.css.map": "/WangCheng0928/ts-react-uicomponents/static/css/main.f6dc477a.chunk.css.map",
+    "main.js.map": "/WangCheng0928/ts-react-uicomponents/main.c93348ac3bf9bb959877.bundle.js.map",
+    "runtime~main.js": "/WangCheng0928/ts-react-uicomponents/runtime~main.c93348ac3bf9bb959877.bundle.js",
+    "runtime~main.js.map": "/WangCheng0928/ts-react-uicomponents/runtime~main.c93348ac3bf9bb959877.bundle.js.map",
+    "vendors~main.css": "/WangCheng0928/ts-react-uicomponents/static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.js": "/WangCheng0928/ts-react-uicomponents/vendors~main.c93348ac3bf9bb959877.bundle.js",
+    "vendors~main.css.map": "/WangCheng0928/ts-react-uicomponents/static/css/vendors~main.f8f248a5.chunk.css.map",
+    "vendors~main.js.map": "/WangCheng0928/ts-react-uicomponents/vendors~main.c93348ac3bf9bb959877.bundle.js.map",
+    "iframe.html": "/WangCheng0928/ts-react-uicomponents/iframe.html",
+    "precache-manifest.94136c74b6ef3ef0b9461fa0e411b67b.js": "/WangCheng0928/ts-react-uicomponents/precache-manifest.94136c74b6ef3ef0b9461fa0e411b67b.js",
+    "service-worker.js": "/WangCheng0928/ts-react-uicomponents/service-worker.js",
+    "vendors~main.c93348ac3bf9bb959877.bundle.js.LICENSE.txt": "/WangCheng0928/ts-react-uicomponents/vendors~main.c93348ac3bf9bb959877.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.c93348ac3bf9bb959877.bundle.js",
+    "static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.c93348ac3bf9bb959877.bundle.js",
+    "static/css/main.f6dc477a.chunk.css",
+    "main.c93348ac3bf9bb959877.bundle.js"
+  ]
+}

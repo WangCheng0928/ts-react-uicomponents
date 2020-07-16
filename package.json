@@ -1,6 +1,6 @@
 {
   "name": "north-embankment-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React components library",
   "author": "wangcheng",
   "private": false,
@@ -46,7 +46,7 @@
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "prepublish": "npm run test:nowatch && npm run lin && npm run build"
+    "prepublish": "npm run test:nowatch && npm run lint && npm run build"
   },
   "husky": {
     "hooks": {

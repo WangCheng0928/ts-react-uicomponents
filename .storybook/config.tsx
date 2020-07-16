@@ -19,5 +19,17 @@ addParameters({
     header: false,
   },
 })
+const loaderFn = () => {
+  // require('../src/welcome.stories.tsx')
+  // require('../src/components/Button/button.stories.tsx')
+  // require('../src/components/Menu/menu.stories.tsx')
+  // require('../src/components/Input/input.stories.tsx')
+  // require('../src/components/AutoComplete/autoComplete.stories.tsx')
+  // require('../src/components/Upload/upload.stories.tsx')
+  const allExports = [require('../src/welcome.stories.tsx')]
+  const req = require.context('../src/components', true, /\.stories\.tsx$/)
+  req.keys().forEach((fname) => req(fname))
+  return allExports
+}
 
-configure(require.context('../src', true, /\.stories\.tsx$/), module)
+configure(loaderFn, module)
