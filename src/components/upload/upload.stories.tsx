@@ -19,28 +19,30 @@ const defaultFileList: UploadFile[] = [
   { uid: '121', size: 1234, name: 'abc.md', status: 'error', percent: 30 },
 ]
 
-const checkFileSize = (file: File) => {
-  if (Math.round(file.size / 1024) > 600) {
-    alert('file too big')
-    return false
-  }
-  return true
-}
+// const checkFileSize = (file: File) => {
+//   if (Math.round(file.size / 1024) > 600) {
+//     alert('file too big')
+//     return false
+//   }
+//   return true
+// }
 
-const filePromise = (file: File) => {
-  const newFile = new File([file], 'new_name.docx', { type: file.type })
-  return Promise.resolve(newFile)
-}
+// const filePromise = (file: File) => {
+//   const newFile = new File([file], 'new_name.docx', { type: file.type })
+//   return Promise.resolve(newFile)
+// }
 
 export const SimpleUpload = () => {
   return (
     <Upload
       action="http://www.mocky.io/v2/5cc8019d300000980a055e76"
+      defaultFileList={defaultFileList}
       onChange={action('changed')}
       onProgress={action('onProgress')}
       onRemove={action('onRemove')}
       multiple={true}
       drag={true}
+      uploadType="textarea"
     >
       click or drag to upload
     </Upload>

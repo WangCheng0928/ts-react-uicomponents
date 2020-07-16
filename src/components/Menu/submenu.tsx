@@ -7,10 +7,10 @@ import React, {
 import classNames from 'classnames'
 import { MenuContext } from './menu'
 import { MenuItemProps } from './menuItem'
-import Icon from '../icon/icon'
-import Transition from '../transition/transition'
+import Icon from '../Icon/icon'
+import Transition from '../Transition/transition'
 
-interface ISubmenuProps {
+export interface ISubmenuProps {
   /**submenu的menuItem */
   index?: string
   /**设置submenu的className */

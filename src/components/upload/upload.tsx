@@ -1,11 +1,12 @@
 import React, { FC, useRef, ChangeEvent, useState } from 'react'
 import axios from 'axios'
-
-import Button from '../button/button'
 import UploadList from './uploadList'
 import Dragger from './dragger'
+import Button from '../Button/button'
+import Icon from '../Icon'
 
 export type UploadFileStatus = 'ready' | 'uploading' | 'success' | 'error'
+export type UploadTypes = 'btn' | 'textarea'
 
 //为了展示上传文件的状态，需要一个interface来设置当前文件的状态，文件列表中每个文件包含的属性即UploadFile
 export interface UploadFile {
@@ -35,6 +36,7 @@ export interface UploadProps {
   accept?: string
   multiple?: boolean
   drag?: boolean
+  uploadType?: UploadTypes
 }
 
 export const Upload: FC<UploadProps> = (props) => {
@@ -56,6 +58,7 @@ export const Upload: FC<UploadProps> = (props) => {
     multiple,
     drag,
     children,
+    uploadType,
   } = props
 
   const [fileList, setFileList] = useState<UploadFile[]>(defaultFileList || [])
@@ -185,32 +188,50 @@ export const Upload: FC<UploadProps> = (props) => {
 
   return (
     <div className="upload-component">
-      <div
-        className="upload-input"
-        style={{ display: 'inline-block' }}
-        onClick={handleClick}
-      >
-        {drag ? (
-          <Dragger
-            onFile={(files) => {
-              uploadFiles(files)
-            }}
-          >
-            {children}
-          </Dragger>
-        ) : (
-          children
-        )}
-        <input
-          className="file-input"
-          style={{ display: 'none' }}
-          ref={fileInputRef}
-          type="file"
-          onChange={handleFileChange}
-          accept={accept}
-          multiple={multiple}
-        ></input>
-      </div>
+      {uploadType === 'btn' ? (
+        <div>
+          <Button btnType="primary" onClick={handleClick}>
+            upload File
+          </Button>
+          <input
+            className="file-input"
+            style={{ display: 'none' }}
+            ref={fileInputRef}
+            type="file"
+            onChange={handleFileChange}
+            accept={accept}
+            multiple={multiple}
+          ></input>
+        </div>
+      ) : (
+        <div
+          className="upload-input"
+          style={{ display: 'inline-block' }}
+          onClick={handleClick}
+        >
+          {drag ? (
+            <Dragger
+              onFile={(files) => {
+                uploadFiles(files)
+              }}
+            >
+              {children}
+            </Dragger>
+          ) : (
+            children
+          )}
+          <input
+            className="file-input"
+            style={{ display: 'none' }}
+            ref={fileInputRef}
+            type="file"
+            onChange={handleFileChange}
+            accept={accept}
+            multiple={multiple}
+          ></input>
+        </div>
+      )}
+
       <UploadList fileList={fileList} onRemove={handleRemove}></UploadList>
     </div>
   )
@@ -218,5 +239,6 @@ export const Upload: FC<UploadProps> = (props) => {
 
 Upload.defaultProps = {
   name: 'file',
+  uploadType: 'btn',
 }
 export default Upload

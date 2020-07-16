@@ -7,9 +7,9 @@ import React, {
   useEffect,
   useRef,
 } from 'react'
-import Input, { InputProps } from '../input/input'
+import Input, { InputProps } from '../Input/input'
 import classNames from 'classnames'
-import Icon from '../icon/icon'
+import Icon from '../Icon/icon'
 import useDebounce from '../../hooks/useDebounce'
 import useClickOutside from '../../hooks/useClickOutside'
 
