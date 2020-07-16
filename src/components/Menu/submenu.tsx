@@ -19,6 +19,12 @@ interface ISubmenuProps {
   title?: string
 }
 
+/** SubMenu组件和Menu组件一起使用，作为其子组件
+ * #### reference methods
+ * ~~~
+ * import { SubMenu } from 'north-embankment-ui'
+ * ~~~
+ */
 export const SubMenu: FC<ISubmenuProps> = (props) => {
   const context = useContext(MenuContext)
   const { index, title, className, children } = props

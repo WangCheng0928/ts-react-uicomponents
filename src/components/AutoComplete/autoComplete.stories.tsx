@@ -1,15 +1,11 @@
 import React from 'react'
 import AutoComplete, { DataSourceType } from './autoComplete'
+import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 interface githubApiProps {
   name?: string
   url?: string
-}
-
-export default {
-  component: AutoComplete,
-  title: 'AutoComplete',
 }
 
 const SimpleComplete = () => {
@@ -83,4 +79,4 @@ const SimpleComplete = () => {
   )
 }
 
-export const autoCompleteTest = () => <SimpleComplete />
+storiesOf('AutoComplete Component', module).add('AutoComplete', SimpleComplete)

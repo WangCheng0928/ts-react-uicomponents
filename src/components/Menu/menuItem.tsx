@@ -13,6 +13,12 @@ export interface MenuItemProps {
   style?: React.CSSProperties
 }
 
+/** MenuItem组件和Menu组件一起使用，作为其子组件
+ * #### reference methods
+ * ~~~
+ * import { MenuItem } from 'north-embankment-ui'
+ * ~~~
+ */
 export const MenuItem: FC<MenuItemProps> = (props) => {
   const { index, disabled, className, style, children } = props
   const context = useContext(MenuContext)

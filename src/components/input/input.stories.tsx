@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Input from './input'
 import { action } from '@storybook/addon-actions'
 
-const ControlledInput = () => {
-  const [value, setValue] = useState('')
-  return (
-    <Input
-      value={value}
-      defaultValue="ControlledInput"
-      onChange={(e) => {
-        setValue(e.target.value)
-      }}
-    />
-  )
-}
+// const ControlledInput = () => {
+//   const [value, setValue] = useState('')
+//   return (
+//     <Input
+//       value={value}
+//       defaultValue="ControlledInput"
+//       onChange={(e) => {
+//         setValue(e.target.value)
+//       }}
+//     />
+//   )
+// }
 
 export default {
   title: 'Input Component',
@@ -27,7 +27,6 @@ export const defaultInput = () => (
       placeholder="请输入文本"
       onChange={action('changed')}
     ></Input>
-    <ControlledInput />
   </>
 )
 defaultInput.story = {

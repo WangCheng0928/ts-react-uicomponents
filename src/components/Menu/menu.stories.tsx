@@ -4,7 +4,6 @@ import Submenu from './submenu'
 import MenuItem from './menuItem'
 
 export default {
-  component: Menu,
   title: 'Menu Component',
 }
 

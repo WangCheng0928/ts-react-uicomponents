@@ -5,7 +5,7 @@ import {
   FontAwesomeIconProps,
 } from '@fortawesome/react-fontawesome'
 
-type ThemeProps =
+export type ThemeProps =
   | 'primary'
   | 'secondary'
   | 'success'

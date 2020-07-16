@@ -1,0 +1,110 @@
+.upload-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.upload-list-item {
+  transition: all .5s cubic-bezier(.55, 0, .1, 1);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 3px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 200px;
+  position: relative;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+
+  .file-name {
+    margin-left: 5px;
+    margin-right: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+
+  .file-actions {
+    display: none;
+  }
+
+  &:hover {
+    .file-actions {
+      display: block;
+      position: absolute;
+      right: 6px;
+      top: 0;
+      line-height: inherit;
+    }
+
+    .file-status {
+      display: none;
+    }
+  }
+}
+
+.file-name-error {
+  color: $danger;
+
+  svg {
+    color: $danger;
+  }
+}
+
+.file-status {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  line-height: inherit;
+
+  .file-status-success {
+    svg {
+      color: $green;
+    }
+  }
+
+  .file-status-uploading {
+    svg {
+      color: #000093;
+    }
+  }
+
+  .file-status-error {
+    svg {
+      color: $danger;
+    }
+  }
+}
+
+.upload-input {
+  width: 200px;
+  height: 150px;
+
+  .uploader-dragger {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('./upload.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+
+    p {
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .is-dragOver {
+    background-color: lighten($color: $cyan, $amount: 40%);
+  }
+}

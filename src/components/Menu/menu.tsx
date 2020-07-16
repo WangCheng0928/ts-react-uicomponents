@@ -35,6 +35,13 @@ interface IMenuContext {
 
 export const MenuContext = React.createContext<IMenuContext>({ index: '0' })
 
+/** Menu组件常用的组件之一,和MenuItem,SubMenu搭配使用
+ * #### reference methods
+ * ~~~
+ * import { Menu } from 'north-embankment-ui'
+ * ~~~
+ *
+ */
 export const Menu: FC<MenuProps> = (props) => {
   const {
     className,
