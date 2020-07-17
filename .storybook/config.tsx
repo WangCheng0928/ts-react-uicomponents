@@ -16,7 +16,6 @@ addDecorator(withInfo)
 addParameters({
   info: {
     inline: true,
-    header: false,
   },
 })
 const loaderFn = () => {
