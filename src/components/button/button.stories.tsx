@@ -4,7 +4,7 @@ import Button from './button'
 
 export default {
   component: Button,
-  title: 'Button Component',
+  title: 'Button组件',
 }
 
 export const DefaultButton = () => (
@@ -34,7 +34,7 @@ export const ButtonWithType = () => (
       primary button
     </Button>
     <Button btnType="danger" onClick={action('clicked')}>
-      primary button
+      danger button
     </Button>
     <Button
       btnType="link"
@@ -42,7 +42,7 @@ export const ButtonWithType = () => (
       target="_blank"
       onClick={action('clicked')}
     >
-      primary button
+      link button
     </Button>
   </>
 )

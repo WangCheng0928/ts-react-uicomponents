@@ -30,8 +30,10 @@ export interface AutoCompleteProps extends Omit<InputProps, 'onSelect'> {
   renderOption?: (item: DataSourceType) => ReactElement | null
 }
 
-/** AutoComplete组件用于根据用户的输入匹配相应的选项
- * #### reference methods
+/**
+ * #### AutoComplete组件用于根据用户的输入匹配相应的选项
+ * ##### 引用方式
+ *
  * ~~~
  * import { AutoComplete } from 'north-embankment-ui'
  * ~~~

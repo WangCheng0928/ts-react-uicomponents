@@ -16,7 +16,7 @@ import { action } from '@storybook/addon-actions'
 // }
 
 export default {
-  title: 'Input Component',
+  title: 'Input组件',
   component: Input,
 }
 

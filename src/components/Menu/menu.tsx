@@ -4,6 +4,7 @@ import React, {
   FC,
   CSSProperties,
   FunctionComponentElement,
+  createContext,
 } from 'react'
 import classNames from 'classnames'
 import { MenuItemProps } from './menuItem'
@@ -33,14 +34,14 @@ interface IMenuContext {
   defaultOpenSubMenus?: string[]
 }
 
-export const MenuContext = React.createContext<IMenuContext>({ index: '0' })
+export const MenuContext = createContext<IMenuContext>({ index: '0' })
 
-/** Menu组件常用的组件之一,和MenuItem,SubMenu搭配使用
- * #### reference methods
+/**
+ * #### Menu组件常用的组件之一,和MenuItem,SubMenu搭配使用
+ * ##### 引用方式
  * ~~~
  * import { Menu } from 'north-embankment-ui'
  * ~~~
- *
  */
 export const Menu: FC<MenuProps> = (props) => {
   const {

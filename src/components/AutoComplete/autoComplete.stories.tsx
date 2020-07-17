@@ -75,8 +75,10 @@ const SimpleComplete = () => {
       fetchSuggestions={handleFetch}
       onSelect={action('selected')}
       renderOption={renderOption}
+      style={{ width: '500px' }}
+      placeholder="请输入关键字"
     ></AutoComplete>
   )
 }
 
-storiesOf('AutoComplete Component', module).add('AutoComplete', SimpleComplete)
+storiesOf('AutoComplete组件', module).add('AutoComplete', SimpleComplete)

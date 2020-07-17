@@ -26,8 +26,8 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 /**
  *
- * The most commonly used button elements on the page, suitable for completing specific interactions
- * #### reference methods
+ * #### Button组件是最常见的组件之一，用于开始一个即使操作
+ * ##### 引用方式
  *
  * ~~~js
  * import { Button } from 'north-embankment-ui'

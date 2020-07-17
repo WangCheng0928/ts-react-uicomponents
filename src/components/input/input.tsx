@@ -25,9 +25,9 @@ export interface InputProps
 }
 
 /**
- * Input 输入框 通过鼠标或键盘输入内容， 是最基本的表单组件
+ * #### Input 输入框 通过鼠标或键盘输入内容， 是最基本的表单组件
+ * ##### 引用方式
  * ~~~js
- *  引用方式
  *  import { Input } from 'north-embankment-ui'
  * ~~~
  * 支持 HTMLInput的所有基本属性

@@ -3,12 +3,13 @@ import axios from 'axios'
 import UploadList from './uploadList'
 import Dragger from './dragger'
 import Button from '../Button/button'
-import Icon from '../Icon'
 
 export type UploadFileStatus = 'ready' | 'uploading' | 'success' | 'error'
 export type UploadTypes = 'btn' | 'textarea'
 
-//为了展示上传文件的状态，需要一个interface来设置当前文件的状态，文件列表中每个文件包含的属性即UploadFile
+/**
+ * 为了展示上传文件的状态，需要一个interface来设置当前文件的状态，文件列表中每个文件包含的属性即UploadFile
+ */
 export interface UploadFile {
   uid: string
   size: number
@@ -21,24 +22,48 @@ export interface UploadFile {
 }
 
 export interface UploadProps {
+  /**设置上传服务器地址 */
   action: string
+  /**设置默认上传列表 */
   defaultFileList?: UploadFile[]
+  /**文件上传前的回调 */
   beforeUpload?: (file: File) => boolean | Promise<File>
+  /**文件正在上传时的回调 */
   onProgress?: (percentage: number, file: File) => void
+  /**文件上传成功后的回调 */
   onSucess?: (data: any, file: File) => void
+  /**文件上传失败后的回调 */
   onError?: (data: any, file: File) => void
+  /**文件上传后的回调，无论成功或失败 */
   onChange?: (file: File) => void
+  /**移除文件后的回调 */
   onRemove?: (file: UploadFile) => void
+  /**设置上传文件的header */
   header?: { [key: string]: any }
+  /**设置上传文件的名称 */
   name?: string
+  /**添加上传的数据 */
   data?: { [key: string]: any }
+  /**设置是否携带cookie */
   withCredentials?: boolean
+  /**设置允许上传的文件的类型 */
   accept?: string
+  /**设置是否允许同时上传多个文件 */
   multiple?: boolean
+  /**是否允许拖拽文件上传 */
   drag?: boolean
+  /**设置Upload组件样式 */
   uploadType?: UploadTypes
 }
 
+/**
+ * #### Upload组件 用于将本地文件上传到指定服务器
+ * ##### 引用方式
+ * ~~~js
+ *  import { Upload } from 'north-embankment-ui'
+ * ~~~
+ * 通过uploadTypes属性支持两种上传方式
+ */
 export const Upload: FC<UploadProps> = (props) => {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const {
